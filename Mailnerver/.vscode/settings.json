@@ -1,0 +1,17 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\benny\\Downloads\\javax.mail.jar",
+        "c:\\Users\\benny\\Downloads\\activation-jaf1.1.1.jar\\activation-jaf1.1.1.jar",
+        "c:\\Users\\benny\\OneDrive - BBBaden\\Coding\\ILA 2021-22\\Mailnerver\\ILA_1302_mailnerver\\sqlite-jdbc-3.36.0.1.jar",
+        "c:\\Users\\benny\\Downloads\\sqlite-jdbc-3.36.0.3.jar",
+        "c:\\Users\\benny\\Downloads\\javax.mail-1.6.2.jar",
+        "c:\\Users\\benny\\Downloads\\jar_files\\activation-1.1.1.jar",
+        "c:\\Users\\Benjy De Asiat\\OneDrive - BBBaden\\Coding\\ILA 2021-22\\Mailnerver\\jar_files\\activation-1.1.1.jar",
+        "c:\\Users\\Benjy De Asiat\\OneDrive - BBBaden\\Coding\\ILA 2021-22\\Mailnerver\\jar_files\\mail-1.4.1.jar",
+        "c:\\Users\\Benjy De Asiat\\OneDrive - BBBaden\\Coding\\ILA 2021-22\\Mailnerver\\jar_files\\sqlite-jdbc-3.36.0.1.jar",
+        "c:\\Users\\benny\\OneDrive - BBBaden\\Coding\\ILA 2021-22\\Mailnerver\\jar_files\\sqlite-jdbc-3.36.0.1.jar"
+    ]
+}
