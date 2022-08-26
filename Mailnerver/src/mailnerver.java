@@ -69,8 +69,8 @@ public class mailnerver implements Runnable{
    }
 
    private void sendMail(String email, java.sql.Date naechsteAbsendezeit) throws MessagingException{
-      String fromUser = "mailnervertestemail@gmail.com";
-		String fromUserPassword = "test12345%";
+      String fromUser = "yourmail@mail.com";
+		String fromUserPassword = "somePasswordUWontGetLol";
 		String emailHost = "smtp.gmail.com";
 
       Transport transport = newSession.getTransport("smtp");
