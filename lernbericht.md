@@ -1,31 +1,60 @@
 # Lern-Bericht
-✍️ ggf. Ihr Gruppenname und Ihre Gruppenmitglieder
+Mailnerver - Shayanthan Ravindran, Benjamin Peterhans
 
 ## Einleitung
 
-✍️ Ein Satz, worum es in dem Projekt ging. Muss für einen externen Leser einfach zu verstehen sein.
+Für dieses Lernatelierprojekt konnten wir wiederum ein Projekt aus der Aufgabenliste aussuchen. Wieder habe ich das Projekt mit dem vorherigen Partner (Shayanthan Ravindran) vom Projekt ILA_1301 bearbeitet. Wir haben uns in der Entscheidungsphase für einen "Mailnerver" entschieden, welches wir gerne realisieren wollten. Weitere Details zu diesem Mailnerver kommen in der Produktbeschreibung vor.
 
-## Was habe ich gelernt?
+## Ziele
 
-✍️ Beschreiben Sie in einem Satz **eine** Sache, die Sie bei diesem Projekt gelernt haben und die Sie in diesem Lern-Bericht dokumentieren.
+Ich kann...
+
+Z1:
+...in Java mit SQLITE arbeiten.
+Z2:
+...die Datenbanksprache SQL in Java anwenden.
+Z3:
+...mithilfe des Internets eine E-Mail mit Gmail absenden.
+Z4:
+...das GUI in diesem Projekt miteinimplementieren.
 
 ## Beschreibung
 
-✍️ Verwenden Sie drei verschiedene Medien, um zu zeigen, was Sie gelernt haben. Zum Beispiel:
+In diesem Programm geht es darum, einen bestimmten Empfänger "vollzuspammen". Es wurden dafür mehrere Optionen beziehungsweise drei Optionen rein implementiert, mit denen der Benutzer etwas eingeben kann. Der Benutzer kann auch ganz normal das Programm mit einer Eingabe beenden (mittels "Threading" ist dies möglich).
+Die erste Funktion wäre das Einfügen von einem neuen Empfänger. Der Benutzer wird dort nach der Empfängeradresse und dem Absendedatum gefragt.
+Die zweite Funktion ist das Löschen eines Empfängers. Auch hier wird der Benutzer aufgefordert, die E-Mail des Empfängers einzugeben.
+Zuletzt kann man noch anzeigen lassen, wann die nächste E-Mail an einen Empfänger gesendet wird (Eingabe des Benutzers mit der Empfängeradresse).
 
-* Eine textliche Beschreibung
-* Ein deutliches, aussagekräftiges Bild oder eine kommentierte Bildschirm-Aufnahme
-* Ein gut dokumentierter Code-Fetzen
-* Ein Link zu einem *selbst aufgenommenen* youtube-Video oder `.gif`.
+Der Mailnerver wurde so programmiert, dass die Wartezeit bis zur nächsten Absendezeit mit der Verschickung halbiert. Das heisst, wenn man dem Empfänger in zwei Tagen eine E-Mail schicken will, wird dies auch gemacht und zusätzlich wird diese zwei Tagen halbiert, also auf einen Tag. Das bedeutet, dass die zweite E-Mail, die verschickt wird, einen Tag später nach der ersten Verschickung erfolgt.
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/UHTzR0_b-g4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+
+<script src="https://gist.github.com/PBenjy/240716155aa371d9af713f74ec2006c5.js"></script>
 
 ## Verifikation
 
-✍️ Erklären Sie kurz und bündig, inwiefern die von Ihnen verwendeten Medien zeigen, was Sie gelernt haben.
+Z1: Wird mit dem Datenbank "Mailnerver.db" im Projektordner und dem Code in "database.java" von Zeile 11 bis 22 validiert.
+
+Z2: Wird mit dem Beispielausschnitt aus dem Code in "database.java" von Zeile 24 bis 42 validiert.
+
+Z3: Wird mit dem Code in "mailnerver.java" von Zeile 76 bis 79 validiert (Ausschnitt wo die Email versendet wird).
+
+Z4: Wird mit einem Ausschnitt aus dem Code in "GUI.java" von Zeile 116 bis 137 validiert.
 
 # Reflektion zum Arbeitsprozess
 
-👍 Überlegen Sie sich jeweils etwas, was gut an Ihrer Arbeit lief; 
+Einarbeitung:
 
-👎 und etwas, was nicht gut lief.
 
-**VBV**: ✍️ Formulieren Sie davon ausgehend einen *handelbaren* Verbesserungsvorschlag.
+Mit den Erfahrungen aus dem letzten Projekt ILA-1301 konnten wir uns recht gut in dieses Projekt einarbeiten. Wir beide denken, dass die Zusammenarbeit im Vergleich zum letzten Mal besser ist. Mit der Planung sind wir eigentlich recht zufrieden, ausser dass wir halt die «Nice-to-Have-Anforderungen» nicht in das Programm implementieren konnten.
+
+Die Entscheidung, mit Visual Studio Code zu arbeiten, kann man zum Teil als Fehler einsehen. Anfangs mussten wir zuerst Auskunft holen, mit welchen «Extension-Packs» arbeiten muss. Mit NetBeans wäre dies höchstwahrscheinlich einfacher gewesen. Durch die «Extension-Packs» konnten wir dann auch gut die .jar-Dateien ins Projekt einfügen, ohne dass wir Probleme bekamen, immer wieder den sogenannten «Classpath» eingeben zu müssen (manchmal funktionierte es, manchmal leider nicht).
+
+Meine Arbeit:
+
+Bei meiner Realisierung bin ich auf Probleme gestossen, die mir auch ein wenig Mühe bereiteten. Da ich nicht viel wusste, wie man eine E-Mail versenden kann, habe ich nach Code-Examples aus dem Internet gesucht. Ehrlich gesagt wäre ich nie imstande, das Versenden von E-Mails eigenhändig zu programmieren. Mit den Code-Examples konnte ich einigermassen verstehen, wie eine E-Mail in Java aufgebaut und generiert wird.
+Probleme bei der Datenbank hatte ich auch, da manchmal die Daten, die ich in die Datenbank einfügen wollte, nicht richtig "funktionierten", oder leichter gesagt: Ich bekam immer eine Exception-Meldung. Mit etwas mehr Nachdenken und genauerem Hinsehen konnte ich das Problem ausfindig machen: In die String-Message von SQL konnte ich die initialisierten Datentypen nicht einfügen. Ich musste dafür das "PreparedStatement" anwenden. Mit dem konnte ich so die Daten in dem SQL-String einfügen.
+
+ 
