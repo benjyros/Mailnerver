@@ -34,7 +34,40 @@ Der Mailnerver wurde so programmiert, dass die Wartezeit bis zur nächsten Absen
 ## Codeausschnitt
 
 ```java
+public void getData(){
+      connect();
+      java.sql.Date naechsteAbsendezeit = null;
+      String email;
+      boolean gotData = false;
+      do{
+         email = gui.askEmail();
+         checkData(email);
+      }while(checkData = false);
 
+      try{
+         String sql = "SELECT naechsteAbsendezeit FROM empfaenger WHERE emailadresse = ?;";
+         PreparedStatement pstmt = c.prepareStatement(sql);
+         pstmt.setString(1, email);
+         ResultSet rs = pstmt.executeQuery();
+
+         while(rs.next()){
+            naechsteAbsendezeit = rs.getDate("naechsteAbsendezeit");
+            gotData = true;
+         }
+
+         if(gotData){
+            gui.successful("read", naechsteAbsendezeit, email);
+         }
+         else{
+            JOptionPane.showMessageDialog(null,
+                  "Dieser Empfänger existiert nicht.\nBitte geben Sie eine andere Emailadresse ein.",
+                  "Error - Read Data",
+                  JOptionPane.WARNING_MESSAGE);
+         }
+      }catch(Exception e){
+         gui.error("read");
+      }
+}
 ```
 ![image text](https://gist.github.com/PBenjy/240716155aa371d9af713f74ec2006c5)
 
@@ -59,6 +92,6 @@ Die Entscheidung, mit Visual Studio Code zu arbeiten, kann man zum Teil als Fehl
 #### Meine Arbeit:
 
 Bei meiner Realisierung bin ich auf Probleme gestossen, die mir auch ein wenig Mühe bereiteten. Da ich nicht viel wusste, wie man eine E-Mail versenden kann, habe ich nach Code-Examples aus dem Internet gesucht. Ehrlich gesagt wäre ich nie imstande, das Versenden von E-Mails eigenhändig zu programmieren. Mit den Code-Examples konnte ich einigermassen verstehen, wie eine E-Mail in Java aufgebaut und generiert wird.
-Probleme bei der Datenbank hatte ich auch, da manchmal die Daten, die ich in die Datenbank einfügen wollte, nicht richtig "funktionierten", oder leichter gesagt: Ich bekam immer eine Exception-Meldung. Mit etwas mehr Nachdenken und genauerem Hinsehen konnte ich das Problem ausfindig machen: In die String-Message von SQL konnte ich die initialisierten Datentypen nicht einfügen. Ich musste dafür das "PreparedStatement" anwenden. Mit dem konnte ich so die Daten in dem SQL-String einfügen.
+Probleme bei der Datenbank hatte ich auch, da manchmal die Daten, die ich in die Datenbank einfügen wollte, nicht richtig "funktionierten", oder leichter gesagt: Ich bekam immer eine Exception-Meldung. Mit etwas mehr Nachdenken und genauerem Hinsehen konnte ich das Problem ausfindig machen: In die String-Message von SQL konnte ich die initialisierten Datentypen nicht einfügen. Ich musste dafür das "PreparedStatement" anwenden. Mit dem konnte ich so die Daten in den SQL-String einfügen.
 
  
