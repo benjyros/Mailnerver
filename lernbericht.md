@@ -27,9 +27,7 @@ Zuletzt kann man noch anzeigen lassen, wann die nächste E-Mail an einen Empfän
 
 Der Mailnerver wurde so programmiert, dass die Wartezeit bis zur nächsten Absendezeit mit der Verschickung halbiert. Das heisst, wenn man dem Empfänger in zwei Tagen eine E-Mail schicken will, wird dies auch gemacht und zusätzlich wird diese zwei Tagen halbiert, also auf einen Tag. Das bedeutet, dass die zweite E-Mail, die verschickt wird, einen Tag später nach der ersten Verschickung erfolgt.
 
-<figure class="video_container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/UHTzR0_b-g4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/UHTzR0_b-g4/0.jpg)](http://www.youtube.com/watch?v=UHTzR0_b-g4 "Mailnerver")
 
 <script src="https://gist.github.com/PBenjy/240716155aa371d9af713f74ec2006c5.js"></script>
 
