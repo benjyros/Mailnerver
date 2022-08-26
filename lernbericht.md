@@ -69,7 +69,6 @@ public void getData(){
       }
 }
 ```
-![image text](https://gist.github.com/PBenjy/240716155aa371d9af713f74ec2006c5)
 
 ## Verifikation
 
