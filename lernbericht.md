@@ -33,7 +33,7 @@ Der Mailnerver wurde so programmiert, dass die Wartezeit bis zur nächsten Absen
 
 ## Codeausschnitt
 
-<script src="https://gist.github.com/PBenjy/240716155aa371d9af713f74ec2006c5.js"></script>
+![image text]([https://cloud.githubusercontent.com/assets/711743/25648417/57cd2c0c-2fe9-11e7-8753-b60ea2656faf.png](https://gist.github.com/PBenjy/240716155aa371d9af713f74ec2006c5.j))
 
 ## Verifikation
 
